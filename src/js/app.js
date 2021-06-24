@@ -71,29 +71,30 @@ imagesGalleryContainer.insertAdjacentHTML('beforeend', galleryItemsMarkup);
 
 imagesGalleryContainer.addEventListener('click', onImagesGalleryContainerClick);
 
-
-function createImagesGalleryMarkup(galleryItems) {
+import createImagesGalleryMarkup from './createImagesGallery.js';
+createImagesGalleryMarkup();
+// function createImagesGalleryMarkup(galleryItems) {
         
-    return galleryItems.map(({preview, original, description}, index  ) => {
-        return `
-        <li class="gallery__item">
-            <a
-                class="gallery__link"
-                href="${original}"
-            >
-                <img
-                    class="gallery__image"
-                    data-index="${index}"
-                    src="${preview}"
-                    data-source="${original}"
-                    alt="${description}"
-                />
-            </a>
-        </li>
-        `;
-    }).join('');
+//     return galleryItems.map(({preview, original, description}, index  ) => {
+//         return `
+//         <li class="gallery__item">
+//             <a
+//                 class="gallery__link"
+//                 href="${original}"
+//             >
+//                 <img
+//                     class="gallery__image"
+//                     data-index="${index}"
+//                     src="${preview}"
+//                     data-source="${original}"
+//                     alt="${description}"
+//                 />
+//             </a>
+//         </li>
+//         `;
+//     }).join('');
 
-    }
+//     }
 
 const lightbox = document.querySelector('.js-lightbox');
 const lightboxImage = document.querySelector('img.lightbox__image');
