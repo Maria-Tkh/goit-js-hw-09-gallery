@@ -72,7 +72,7 @@ imagesGalleryContainer.insertAdjacentHTML('beforeend', galleryItemsMarkup);
 imagesGalleryContainer.addEventListener('click', onImagesGalleryContainerClick);
 
 import createImagesGalleryMarkup from './createImagesGallery.js';
-createImagesGalleryMarkup();
+createImagesGalleryMarkup(galleryItems);
 // function createImagesGalleryMarkup(galleryItems) {
         
 //     return galleryItems.map(({preview, original, description}, index  ) => {
